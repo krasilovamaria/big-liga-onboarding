@@ -18,7 +18,9 @@
 //---------------------------------
 
 @import "blocks/header";
-
+@import "blocks/loader";
+@import "blocks/home-page";
+@import "blocks/modal";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

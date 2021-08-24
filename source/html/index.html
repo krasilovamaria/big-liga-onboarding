@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 
   @@include("source/html/base/head.html")
   <title>Большая Лига</title>
 
 </head>
+
 <body>
 
   <div style="display: none;">
@@ -17,6 +19,54 @@
 
     <main>
       <div class="container">
+
+        <div class="loader">
+          <div class="loader__svg">
+            @@include("source/img/svg/logo.svg")
+            <div class="loader__svg-fill"></div>
+          </div>
+
+          <button type="button" class="loader__btn loader__btn--vp">Нажмите на Enter</button>
+          <button type="button" class="loader__btn loader__btn--sm">Кликните на экран</button>
+        </div>
+
+        <div class="modal">
+          @@include("source/img/svg/dragon-with-line.svg")
+          <p>Для digital‑агентств, продуктовых компаний и фриланс‑команд</p>
+        </div>
+
+        <section class="home-page">
+
+          <div class="home-page__background">
+            @@include("source/img/svg/symbol-A.svg")
+          </div>
+
+          <div class="home-page__col">
+            <h1 class="home-page__title">Вёрстка <br> и фронтенд любой сложности </h1>
+          </div>
+
+          <div class="home-page__col home-page__col--sm">
+            <div class="home-page__img">
+              <div class="home-page__dragon-line-violet-left">
+                @@include("source/img/svg/dragon-line.svg")
+                <span class="home-page__dragon-line-fill-left"></span>
+              </div>
+              <div class="home-page__dragon-line-red">
+                @@include("source/img/svg/dragon-line.svg")
+              </div>
+              <div class="home-page__dragon-line-blue">
+                @@include("source/img/svg/dragon-line.svg")
+                <span class="home-page__dragon-line-fill-blue"></span>
+              </div>
+              <div class="home-page__dragon-line-violet-right">
+                @@include("source/img/svg/dragon-line.svg")
+              </div>
+              @@include("source/img/svg/dragon.svg")
+            </div>
+            <p class="home-page__desc">Для digital‑агентств, продуктовых компаний и фриланс‑команд</p>
+          </div>
+
+        </section>
       </div>
     </main>
 
@@ -26,4 +76,5 @@
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

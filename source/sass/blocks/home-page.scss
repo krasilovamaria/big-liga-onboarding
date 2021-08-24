@@ -1,0 +1,188 @@
+.home-page {
+  display: none;
+
+  &--active {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 110px;
+    padding-bottom: 192px;
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: $viewport--md) {
+      padding: 0;
+      padding-top: 246px;
+    }
+  }
+}
+
+.home-page__background {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+
+  @media (max-width: $viewport--md) {
+    display: none;
+  }
+
+  svg {
+    width: 664px;
+    height: 561px;
+  }
+}
+
+.home-page__col {
+  max-width: 602px;
+  min-height: 384px;
+
+  @media (max-width: $viewport--md) {
+    max-width: 100%;
+    min-height: 100%;
+  }
+
+  &--sm {
+    max-width: 352px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 100%;
+
+    @media (max-width: $viewport--md) {
+      display: none;
+    }
+  }
+}
+
+.home-page__title {
+  margin: 0;
+  padding: 0;
+
+  font-size: 96px;
+  line-height: 96px;
+  font-weight: 400;
+  color: $color-neon-blue;
+}
+
+.home-page__img {
+  width: 100%;
+  height: 100%;
+  padding-top: 135px;
+  padding-left: 100px;
+
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
+
+  .home-page__dragon-line-violet-left {
+    position: absolute;
+    top: 33px;
+    left: -24px;
+
+    color: $color-vivid-violet;
+    transform: rotate(-59deg);
+
+    svg {
+      width: 135px;
+      height: 132px;
+    }
+  }
+
+  .home-page__dragon-line-fill-left {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 90px;
+    height: 50px;
+
+    background-color: $color-default-white;
+    animation: fillUpLineLeft 0.5s ease-in-out infinite;
+  }
+
+  .home-page__dragon-line-red {
+    position: absolute;
+    top: 11px;
+    left: 72px;
+
+    color: $color-torch-red;
+    transform: rotate(-41deg);
+
+    svg {
+      width: 70px;
+      height: 69px;
+    }
+  }
+
+  .home-page__dragon-line-blue {
+    position: absolute;
+    top: -87px;
+    right: 85px;
+
+    color: $color-neon-blue;
+
+    svg {
+      width: 101px;
+      height: 209px;
+    }
+  }
+
+  .home-page__dragon-line-fill-blue {
+    position: absolute;
+    bottom: 120px;
+    right: -15px;
+    width: 120px;
+    height: 100px;
+
+    background-color: $color-default-white;
+    animation: fillUpLineReverse 1.5s ease-in-out infinite;
+  }
+
+  .home-page__dragon-line-violet-right {
+    position: absolute;
+    top: 120px;
+    right: 100px;
+
+    color: $color-vivid-violet;
+    transform: rotate(23deg);
+
+    svg {
+      width: 69px;
+      height: 70px;
+    }
+  }
+}
+
+.home-page__desc {
+  display: flex;
+  align-items: flex-end;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+
+@keyframes fillUpLineLeft {
+  0% {
+    transform: translate(0, -100px);
+  }
+
+  100% {
+    transform: translate(0, 100px);
+  }
+}
+
+@keyframes fillUpLineReverse {
+  0% {
+    transform: translate(0, 100px);
+  }
+
+  100% {
+    transform: translate(0, -100px);
+  }
+}
